@@ -1,0 +1,27 @@
+{
+  "name": "alexandra_romaniuk_js_course-work",
+  "version": "1.0.0",
+  "description": "",
+  "source": "src/index.html",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aleroom/Alexandra_Romaniuk_js_course-work.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aleroom/Alexandra_Romaniuk_js_course-work/issues"
+  },
+  "homepage": "https://github.com/aleroom/Alexandra_Romaniuk_js_course-work#readme",
+  "devDependencies": {
+    "parcel": "^2.7.0"
+  },
+  "dependencies": {
+    "sass": "^1.55.0"
+  }
+  
+}
