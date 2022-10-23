@@ -18,10 +18,10 @@
   },
   "homepage": "https://github.com/aleroom/Alexandra_Romaniuk_js_course-work#readme",
   "devDependencies": {
+    "@parcel/transformer-sass": "^2.7.0",
     "parcel": "^2.7.0"
   },
   "dependencies": {
     "sass": "^1.55.0"
   }
-  
 }
