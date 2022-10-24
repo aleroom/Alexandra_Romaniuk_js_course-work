@@ -5,7 +5,7 @@
 }
 .wrap_add {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     width: 360px;
     padding: 25px;
@@ -14,11 +14,14 @@
     border-radius: 25px;
 }
 .add_descr {
-    width: 200px;
+    width: 100%;
+    margin-bottom: 10px;
+    text-align: center;
    
     span {
         font-size: 30px;
-        color: #ffffff
+        color: #ffffff;
+        
     }
   
 }

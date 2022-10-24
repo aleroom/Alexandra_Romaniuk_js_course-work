@@ -62,7 +62,7 @@ html {
         margin-bottom: none;
     }
 }
-.task_name {
+.task_name, .message_input, .deadline_input, .performer_input {
     display: block;
     width: 100%;
     border: 1px solid #c5c5c5;
