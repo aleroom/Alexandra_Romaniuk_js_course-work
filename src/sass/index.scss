@@ -1,3 +1,6 @@
+@import '../sass/header.scss';
+@import '../sass/add.scss';
+
 *{
     margin: 0;
     padding: 0;
@@ -11,22 +14,6 @@ html {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    &:after {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: rgba(0,0,0,.4);
-        z-index: 2;
-    }  }
- 
-
-
-#header {
-    box-shadow: 0 0 10px rgba(0,0,0,0.5);
-    margin: 70px 0 40px;
 }
 
 .container {
@@ -36,79 +23,11 @@ html {
     position: relative;
 
 }
-.current_data{
-    font-size: 24px;
-    color: #b4815c;
-    font-weight: 100;
-}
 
-.wrap_header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-.wrap_add-task {
-    display: flex;
-    flex-direction: row;
-    margin: 100px;
-}
-.wrap_add {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 360px;
-    padding: 25px;
-    background-color: rgb(245, 223, 208, 0.5);
-    margin: 0 15px 40px 0;
-    box-shadow: 0 0 10px rgba(0,0,0,0.5);
-    margin: auto;
-}
-.add_descr {
-    width: 200px;
-   
-    span {
-        font-size: 30px;
-        color: #ffffff
-    }
-  
-}
-.plus {
-    margin: auto;
-    .fa {
-        color: #412a00;
-        font-size: 25px;
 
-    }
-}
-.trash {
-    margin: auto;
-    .fa-trash-alt{
-        color: #bd2539;
-        font-size: 25px; 
-    }
-}
 
-.logo_descr{
-    text-transform:capitalize;
-    color:  #f9eee6;
-    text-align: center;
-    font-size: 40px;
-    font-family: Fasthand;
 
-}
-.greeting_title{
-    text-transform:capitalize;
-    color:  #f9eee6;
-    text-align: center;
-    font-size: 75px;
-    font-family: Fasthand;
- }
-.current_data {
-    color:  #f9eee6;
-    text-align: center;
-    font-size: 40px;
-    font-family: Fasthand;
- }
+
 .wrap {
     display: flex;
     flex-direction: row;
@@ -126,6 +45,7 @@ html {
     padding: 15px;
     margin-right: 15px;
     background-color: rgb(181, 151, 130, 0.7);
+    border-radius: 25px;
     
 }
 .task {
@@ -133,23 +53,31 @@ html {
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
-    border: 1px solid rgb(255, 252, 252);
-    margin-bottom: 25px;
+    
+   
+}
+.task_wrapper, .message_wrapper, .deadline, .performer_wrapper {
+    margin-bottom: 3px;
+    &:last-child{
+        margin-bottom: none;
+    }
 }
 .task_name {
-    margin-bottom: 20px;
+    display: block;
+    width: 100%;
+    border: 1px solid #c5c5c5;
+    padding: 7px 10px;
+    border-radius: 5px;
+    outline: none;
+    
     
 }
-#message {
-    margin-bottom: 20px;
-}
+
 .span_descr {
-    font-size: 30px;
-    color: rgb(51, 22, 25);
+    font-size: 20px;
+    color: rgb(46, 31, 32);
 }
-.deadline{
-    margin-bottom: 20px;
-}
+
 
 .task:last-child {
     margin-bottom: 0;

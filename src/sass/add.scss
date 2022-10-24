@@ -1,0 +1,43 @@
+.wrap_add-task {
+    display: flex;
+    flex-direction: row;
+    margin: 100px;
+}
+.wrap_add {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 360px;
+    padding: 25px;
+    background-color: rgb(245, 223, 208, 0.5);
+    margin: auto;
+    border-radius: 25px;
+}
+.add_descr {
+    width: 200px;
+   
+    span {
+        font-size: 30px;
+        color: #ffffff
+    }
+  
+}
+.plus {
+    margin: auto;
+    border: none;
+    background-color: #c7b8b880;
+    .fa {
+        color: #412a00;
+        font-size: 25px;
+
+    }
+}
+.trash {
+    margin: auto;
+    border: none;
+    background-color: #c7b8b880;
+    .fa-trash-alt{
+        color: #412a00;
+        font-size: 25px; 
+    }
+}
