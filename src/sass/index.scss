@@ -106,4 +106,21 @@ html {
     color: #412a00;
     font-size: 25px;
 }
+.div1 {
+    background-color: white;
+    width: 80%;
+    margin: 0 auto;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-bottom: 5px;
+}
+.div1 p{
+    margin-left: 10px;
+}
+.btn_1 {
+    width: 50%;
+    margin: 0 auto;
+}
  

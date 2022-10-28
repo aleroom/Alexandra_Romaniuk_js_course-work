@@ -14,18 +14,33 @@ document.querySelector(".create").addEventListener("click", function () {
   };
 
   todoArray.push(task);
-  console.log(todoArray);
+  // console.log(todoArray);
   clearInputFields();
 
-  for (let index = 0; index < todoArray.length; index++) {
-    console.log(todoArray[index]);
-    let parentDiv = document.querySelector(".wrap_task");
-    let taskFromArray = todoArray[index];
-    parentDiv.innerHTML += createTemplate(taskFromArray);
-  }
-});
+  let div = document.createElement('div');
+  div.classList.add('div1');
+  div.innerHTML = `<p>${task.taskname}</p> <p>${task.msg}</p> <p>${task.deadline}</p> <p>${task.perf}</p> <button class="btn_1">moove</button>`;
 
-document.querySelector(".trash").addEventListener("click", clearInputFields);
+  let rootDiv = document.querySelector('.wrap_task');
+  rootDiv.append(div);
+  document.querySelector(".trash").addEventListener("click", clearInputFields);
+
+
+  // document.querySelector().addEventListener("click", consoleSmth);
+
+  btns = document.querySelectorAll('.btn_1');
+    for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function () {
+          let asddd = this.parentNode.childNodes;
+          asddd.forEach(element => {
+            if (element.innerHTML !== undefined) {
+              console.log(element.innerHTML)
+            }
+          });
+        });
+    }
+
+})
 
 function clearInputFields() {
   document.querySelector(".task_name").value = "";
@@ -34,24 +49,3 @@ function clearInputFields() {
   document.querySelector(".performer_input").value = "";
 }
 
-const createTemplate = (task) => {
-  // return (template = `
-  // <div class="notes_name">task_name=${task.taskname}</div>
-  // <div class="notes_name" message="${task.message}"></div>
-  // <div class="notes_name" deadline="${task.deadLine}"></div>
-  // <div class="notes_name" performer="${task.performer}"></div>
-  // `);
-
-  return (template = `
-        <div class="todo_note">
-            <div class="notes_name">task_name=${task.taskname}
-            </div>
-            <div class="notes_message">message=${task.message}
-            </div>
-            <div class="calendar_notes">deadLine=${task.deadLine}
-            </div>
-            <div class="performer_notes">performer=${task.performer}
-            </div>
-    </div>
-    `);
-};
