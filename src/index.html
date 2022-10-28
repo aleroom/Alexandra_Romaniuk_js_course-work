@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Fasthand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <link rel="stylesheet" href="../src/sass/index.scss">
     <title>Document</title>
@@ -13,19 +14,16 @@
     <header id="header">
         <div class="container">
             <div class="wrap_header">
-                <div class="logo">
-                    <span class="logo_descr">toDo</span>
-                </div>
                 <div class="greeting">
                     <h1 class="greeting_title">what can i do today</h1>
                 </div>  
-                <div class="current_data"></div>  
             </div>
-        </div>
+        </div>    
+            
 
     </header>
 
-    <section id="add">
+    <section id="add_task">
         <div class="container">
             <div class="wrap_add-task">
                 <div class="wrap_add">
@@ -33,19 +31,26 @@
                         <span>Make ToDo</span>
                     </div>
                     <div class="task">
+
                         <div class="task_wrapper">
-                            <input type="text" placeholder="Task name" class="task_name">
-                        </div>
+                            <div class="task_descr"><span>Task name</span> </div>
+                            <input type="text" class="task_name">
+                        </div>    
+                            
+
                         <div class="message_wrapper">
-                            <textarea name="message" class="message_input" cols="20" rows="3" placeholder="Enter your message"></textarea>
+                            <div class="task_descr"><span>Message</span> </div>
+                            <textarea name="message" class="message_input" cols="20" rows="3"></textarea>
                         </div>
                         
                         <div class="deadline">
-                            <span class="span_descr">Deadline</span> 
+                            <div class="task_descr"><span>Deadline</span> </div> 
                             <input type="date" placeholder="Deadline" class="deadline_input">
                         </div>
+
                         <div class="performer_wrapper">
-                            <input type="text" placeholder="Performer" class="performer_input">
+                            <div class="task_descr"><span>Performer</span> </div>
+                            <input type="text" class="performer_input">
                         </div> 
                         
                         <div class="create_add"> 

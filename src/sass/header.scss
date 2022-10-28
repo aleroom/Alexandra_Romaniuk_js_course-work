@@ -2,16 +2,9 @@
     
     margin: 70px 0 40px;
 }
-.current_data{
-    font-size: 24px;
-    color: #b4815c;
-    font-weight: 100;
-}
 
 .wrap_header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    text-align: center;
 }
 .wrap_add-task {
     display: flex;
@@ -19,27 +12,17 @@
     margin: 100px;
 }
 
-.logo_descr{
-    text-transform:capitalize;
-    color:  #f9eee6;
-    text-align: center;
-    font-size: 40px;
-    
 
-}
 .greeting_title{
     text-transform:capitalize;
-    color:  #f9eee6;
-    text-align: center;
-    font-size: 75px;
+    color:  #ffffff;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 70px;
     
  }
-.current_data {
-    color:  #f9eee6;
-    text-align: center;
-    font-size: 40px;
-    
- }
+
 
  .todo_note {
     width: 100%;

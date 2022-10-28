@@ -1,3 +1,4 @@
+
 .wrap_add-task {
     display: flex;
     flex-direction: row;
@@ -19,11 +20,23 @@
     text-align: center;
    
     span {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
         font-size: 30px;
         color: #ffffff;
         
     }
   
+}
+.task_descr {
+    span {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1ss5px;
+        color: #ffffff;  
+    }
 }
 .plus {
     margin: auto;
