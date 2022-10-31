@@ -22,9 +22,9 @@
     span {
         font-family: 'Montserrat';
         font-style: normal;
-        font-weight: 400;
+        font-weight: 600;
         font-size: 30px;
-        color: #ffffff;
+        color:#605447;
         
     }
   
@@ -35,25 +35,39 @@
         font-style: normal;
         font-weight: 400;
         font-size: 1ss5px;
-        color: #ffffff;  
+        color: #605447;  
     }
 }
-.plus {
-    margin: auto;
-    border: none;
-    background-color: #c7b8b880;
-    .fa {
-        color: #412a00;
-        font-size: 25px;
 
-    }
-}
 .trash {
     margin: auto;
     border: none;
-    background-color: #c7b8b880;
-    .fa-trash-alt{
-        color: #412a00;
-        font-size: 25px; 
+    background-color: #c7b8b800;
+    color: aqua;
+}
+
+.task {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+   
+}
+.task_wrapper, .message_wrapper, .deadline, .performer_wrapper {
+    margin-bottom: 3px;
+    &:last-child{
+        margin-bottom: none;
     }
+}
+.task_name, .message_input, .deadline_input, .performer_input {
+    display: block;
+    width: 100%;
+    border: 1px solid #c5c5c5;
+    padding: 7px 10px;
+    border-radius: 20px;
+        
+}
+.task:last-child {
+    margin-bottom: 0;
 }

@@ -1,4 +1,5 @@
 import { todoArray } from "./todoArrays.js";
+import { inWorkArray} from "./todoArrays.js";
 
 document.querySelector(".create").addEventListener("click", function () {
   let taskName = document.querySelector(".task_name").value;
@@ -14,31 +15,36 @@ document.querySelector(".create").addEventListener("click", function () {
   };
 
   todoArray.push(task);
-  // console.log(todoArray);
   clearInputFields();
 
   let div = document.createElement('div');
-  div.classList.add('div1');
-  div.innerHTML = `<p>${task.taskname}</p> <p>${task.msg}</p> <p>${task.deadline}</p> <p>${task.perf}</p> <button class="btn_1">moove</button>`;
+  div.setAttribute('id', todoArray.length - 1)
+  div.classList.add('inner_task');
+  div.innerHTML = `<p id ="taskname">${task.taskname}</p> <p id="task_msg">${task.msg}</p> <p id="task_deadline">${task.deadline}</p> <p id="task_perf">${task.perf}</p> <button id="${todoArray.length}">moove</button>`;
 
   let rootDiv = document.querySelector('.wrap_task');
   rootDiv.append(div);
   document.querySelector(".trash").addEventListener("click", clearInputFields);
 
+   let btnnnnn = document.getElementById(todoArray.length);
+   btnnnnn.addEventListener("click", function () {
+    inWorkArray.push(todoArray[div.getAttribute('id')])
+    todoArray.pop
+    console.log(inWorkArray);
+    
+    rootDiv.removeChild(div);
 
-  // document.querySelector().addEventListener("click", consoleSmth);
+    let inWorkDiv = document.createElement('div');
+    inWorkDiv.setAttribute('id', inWorkArray.length - 1);
+    inWorkDiv.classList.add('in_work_task');
+    let tsk = inWorkArray[inWorkArray.length - 1];
+    console.log(tsk)
+    inWorkDiv.innerHTML = `<p id ="taskname">${tsk.taskname}</p> <p id="task_msg">${tsk.msg}</p> <p id="task_deadline">${tsk.deadline}</p> <p id="task_perf">${tsk.perf}</p> <button id="${inWorkArray.length}">moove</button>`;
 
-  btns = document.querySelectorAll('.btn_1');
-    for (var i = 0; i < btns.length; i++) {
-        btns[i].addEventListener("click", function () {
-          let asddd = this.parentNode.childNodes;
-          asddd.forEach(element => {
-            if (element.innerHTML !== undefined) {
-              console.log(element.innerHTML)
-            }
-          });
-        });
-    }
+    let inWorkRootDiv = document.querySelector('.wrap_in-work');
+    inWorkRootDiv.append(inWorkDiv);
+
+  });
 
 })
 
